@@ -121,6 +121,9 @@ namespace FUSE
             this.label32 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -142,13 +145,14 @@ namespace FUSE
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.transactionToolStripMenuItem,
+            this.searchToolStripMenuItem,
             this.homeToolStripMenuItem,
             this.actionsToolStripMenuItem,
             this.alertsToolStripMenuItem,
             this.toolsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(343, 11);
+            this.menuStrip1.Location = new System.Drawing.Point(169, 11);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(293, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(467, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -487,7 +491,7 @@ namespace FUSE
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(259, 56);
+            this.tabControl1.Location = new System.Drawing.Point(259, 121);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(615, 569);
@@ -1070,11 +1074,37 @@ namespace FUSE
             this.label12.TabIndex = 11;
             this.label12.Text = "Email";
             // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(289, 73);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(251, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(546, 73);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Search";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Fuse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 673);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.menuStrip1);
@@ -1201,5 +1231,8 @@ namespace FUSE
         private System.Windows.Forms.TextBox secName;
         private System.Windows.Forms.ToolStripMenuItem updateCustomerInfoToolStripMenuItem;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button3;
     }
 }

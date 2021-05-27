@@ -44,6 +44,37 @@ namespace FUSE
             secName.Text = customerinfo.SetValueForText1;
             secContact.Text = customerinfo.SetValueForText2;
             secEmail.Text = customerinfo.SetValueForText3;
+
+            groupBox8.Visible = false;
+            tabControl1.Visible = false;
+            tabControl2.Visible = false;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+          
+
+
+
+            if (textBox2.TextLength == 0)
+            {
+
+            }
+            else
+            {
+                groupBox8.Visible = true;
+                tabControl1.Visible = true;
+                tabControl2.Visible = true;
+            }
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox8.Visible = false;
+            tabControl1.Visible = false;
+            tabControl2.Visible = false;
         }
     }
 }
