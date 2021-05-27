@@ -34,8 +34,16 @@ namespace FUSE
 
         private void updateCustomerInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Close();
             customerinfo cx = new customerinfo();
             cx.Show();
+        }
+
+        private void Fuse_Load(object sender, EventArgs e)
+        {
+            secName.Text = customerinfo.SetValueForText1;
+            secContact.Text = customerinfo.SetValueForText2;
+            secEmail.Text = customerinfo.SetValueForText3;
         }
     }
 }

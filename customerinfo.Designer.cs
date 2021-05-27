@@ -200,6 +200,7 @@ namespace FUSE
             this.Controls.Add(this.label1);
             this.Name = "customerinfo";
             this.Text = "customerinfo";
+            this.Load += new System.EventHandler(this.customerinfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

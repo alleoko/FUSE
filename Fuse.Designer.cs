@@ -38,6 +38,7 @@ namespace FUSE
             this.createNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dPASmsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dPAEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCustomerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alertsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -62,7 +63,7 @@ namespace FUSE
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.secEmail = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -80,8 +81,8 @@ namespace FUSE
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.secName = new System.Windows.Forms.TextBox();
+            this.secContact = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -119,7 +120,7 @@ namespace FUSE
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.updateCustomerInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -179,32 +180,39 @@ namespace FUSE
             // emailSoaToolStripMenuItem
             // 
             this.emailSoaToolStripMenuItem.Name = "emailSoaToolStripMenuItem";
-            this.emailSoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.emailSoaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.emailSoaToolStripMenuItem.Text = "email soa";
             // 
             // smsSubscriberToolStripMenuItem
             // 
             this.smsSubscriberToolStripMenuItem.Name = "smsSubscriberToolStripMenuItem";
-            this.smsSubscriberToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.smsSubscriberToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.smsSubscriberToolStripMenuItem.Text = "sms subscriber";
             // 
             // createNoteToolStripMenuItem
             // 
             this.createNoteToolStripMenuItem.Name = "createNoteToolStripMenuItem";
-            this.createNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createNoteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.createNoteToolStripMenuItem.Text = "create note";
             // 
             // dPASmsToolStripMenuItem
             // 
             this.dPASmsToolStripMenuItem.Name = "dPASmsToolStripMenuItem";
-            this.dPASmsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dPASmsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.dPASmsToolStripMenuItem.Text = "DPA sms";
             // 
             // dPAEmailToolStripMenuItem
             // 
             this.dPAEmailToolStripMenuItem.Name = "dPAEmailToolStripMenuItem";
-            this.dPAEmailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dPAEmailToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.dPAEmailToolStripMenuItem.Text = "DPA email";
+            // 
+            // updateCustomerInfoToolStripMenuItem
+            // 
+            this.updateCustomerInfoToolStripMenuItem.Name = "updateCustomerInfoToolStripMenuItem";
+            this.updateCustomerInfoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.updateCustomerInfoToolStripMenuItem.Text = "Update Customer Info";
+            this.updateCustomerInfoToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerInfoToolStripMenuItem_Click);
             // 
             // alertsToolStripMenuItem
             // 
@@ -445,14 +453,14 @@ namespace FUSE
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer";
             // 
-            // label12
+            // secEmail
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(280, 84);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Email: john@gmail.com";
+            this.secEmail.AutoSize = true;
+            this.secEmail.Location = new System.Drawing.Point(313, 84);
+            this.secEmail.Name = "secEmail";
+            this.secEmail.Size = new System.Drawing.Size(88, 13);
+            this.secEmail.TabIndex = 7;
+            this.secEmail.Text = " john@gmail.com";
             // 
             // label13
             // 
@@ -578,7 +586,6 @@ namespace FUSE
             this.groupBox3.Size = new System.Drawing.Size(459, 100);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
             // 
             // label17
             // 
@@ -609,10 +616,11 @@ namespace FUSE
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.secName);
+            this.groupBox2.Controls.Add(this.secContact);
+            this.groupBox2.Controls.Add(this.secEmail);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label11);
@@ -625,7 +633,7 @@ namespace FUSE
             this.groupBox2.Size = new System.Drawing.Size(459, 117);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Information";
             // 
             // textBox4
             // 
@@ -636,23 +644,23 @@ namespace FUSE
             this.textBox4.TabIndex = 10;
             this.textBox4.Text = "0927751234";
             // 
-            // textBox3
+            // secName
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(316, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 13);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "Elon Musk";
+            this.secName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secName.Location = new System.Drawing.Point(316, 44);
+            this.secName.Name = "secName";
+            this.secName.Size = new System.Drawing.Size(100, 13);
+            this.secName.TabIndex = 9;
+            this.secName.Text = "Elon Musk";
             // 
-            // textBox2
+            // secContact
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(316, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 13);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "09123717035";
+            this.secContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secContact.Location = new System.Drawing.Point(316, 66);
+            this.secContact.Name = "secContact";
+            this.secContact.Size = new System.Drawing.Size(100, 13);
+            this.secContact.TabIndex = 8;
+            this.secContact.Text = "09123717035";
             // 
             // label11
             // 
@@ -1053,12 +1061,14 @@ namespace FUSE
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // updateCustomerInfoToolStripMenuItem
+            // label12
             // 
-            this.updateCustomerInfoToolStripMenuItem.Name = "updateCustomerInfoToolStripMenuItem";
-            this.updateCustomerInfoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.updateCustomerInfoToolStripMenuItem.Text = "Update Customer Info";
-            this.updateCustomerInfoToolStripMenuItem.Click += new System.EventHandler(this.updateCustomerInfoToolStripMenuItem_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(275, 84);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Email";
             // 
             // Fuse
             // 
@@ -1071,6 +1081,7 @@ namespace FUSE
             this.Controls.Add(this.tabControl1);
             this.Name = "Fuse";
             this.Text = "Fuse";
+            this.Load += new System.EventHandler(this.Fuse_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -1106,7 +1117,7 @@ namespace FUSE
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label secEmail;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1183,11 +1194,12 @@ namespace FUSE
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox secContact;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox secName;
         private System.Windows.Forms.ToolStripMenuItem updateCustomerInfoToolStripMenuItem;
+        private System.Windows.Forms.Label label12;
     }
 }

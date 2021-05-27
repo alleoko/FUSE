@@ -12,6 +12,13 @@ namespace FUSE
 {
     public partial class customerinfo : Form
     {
+
+
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
+        public static string SetValueForText3 = "";
+
+
         public customerinfo()
         {
             InitializeComponent();
@@ -23,10 +30,28 @@ namespace FUSE
 
             }
             else 
-            { 
+            {
+
+
+                SetValueForText1 = textBox1.Text;
+                SetValueForText2 = textBox2.Text;
+                SetValueForText3 = textBox3.Text;
+
+                Fuse fuse = new Fuse();
+                fuse.Show();
+
+
+
+
+
                 MessageBox.Show("Information Updated"); 
             }
                 
+        }
+
+        private void customerinfo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
